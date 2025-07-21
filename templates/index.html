@@ -1,0 +1,44 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Binance Spot Trading Bot</title>
+</head>
+<body>
+    <h2>📈 Place a Trade Order</h2>
+    <form method="POST">
+        <label>Symbol:</label><br>
+        <select name="symbol" id="symbol">
+            <option value="BTCUSDT">BTC/USDT</option>
+            <option value="ETHUSDT">ETH/USDT</option>
+            <option value="BNBUSDT">BNB/USDT</option>
+            <option value="SOLUSDT">SOL/USDT</option>
+            <option value="ADAUSDT">ADA/USDT</option>
+        </select><br><br>
+
+        <label>Side:</label><br>
+        <select name="side">
+            <option>BUY</option>
+            <option>SELL</option>
+        </select><br><br>
+
+        <label>Order Type:</label><br>
+        <select name="order_type">
+            <option>MARKET</option>
+            <option>LIMIT</option>
+        </select><br><br>
+
+        <label>Quantity:</label><br>
+        <input type="number" name="quantity" step="0.0001" required><br><br>
+
+        <label>Price (for LIMIT orders only):</label><br>
+        <input type="number" name="price" step="0.01"><br><br>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+    {% if message %}
+    <p><strong>{{ message | safe }}</strong></p>
+    {% endif %}
+</body>
+</html>
