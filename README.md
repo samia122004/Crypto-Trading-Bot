@@ -32,7 +32,6 @@ A simple Flask-based web application for placing spot market or limit orders on 
 │ └── index.html # HTML form for submitting trade orders
 ├── .env # API keys and secrets (excluded in .gitignore)
 ├── .gitignore # Ignore sensitive and unnecessary files
-├── requirements.txt # Project dependencies
 └── README.md # You're here!
 
 bash
@@ -45,4 +44,4 @@ Edit
 
 ```bash
 git clone https://github.com/samia122004/crypto-trading-bot.git
-cd binance-trading-bot
+cd crypto-trading-bot
